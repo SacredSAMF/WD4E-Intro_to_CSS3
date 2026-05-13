@@ -1,0 +1,147 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+html{
+    font-size: 18px;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    line-height: 1.25;
+    font-family: Verdana, sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+h1{
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    color: black;
+}
+p{
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+p:first-child{
+    margin-top: 0;
+}
+p:last-child{
+    margin-bottom: 0;
+}
+a{
+    text-decoration: underline;
+    color: #198754;
+    transition: color 0.3s ease, outline 0.3s ease, background-color 0.3s ease;
+}
+a:hover, a:focus{
+    color: #157347;
+}
+a:focus{
+    outline: 2px dotted #198754;
+    outline-offset: 2px;
+}
+
+/* skip link styles */
+.skip-link{
+    padding: 0 1rem;
+    font-size: 0.75rem;
+}
+
+/* header and nav elements */
+header{
+    width: 100%;
+    flex-shrink: 0;
+    padding-bottom: 1px; /* to enable margin collapse */
+    background-color: #eee;
+    text-align: center;
+}
+nav{
+    width: 80%;
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #333;
+    vertical-align: middle;
+    color: #fff;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+nav a{
+    display: block;
+    padding: 0.5em 1rem;
+    background-color: #198754;
+    text-decoration: none;
+    color: inherit;
+}
+nav a:hover, nav a:focus{
+    background-color: #157347;
+    color: inherit;
+}
+nav a.active{
+    box-shadow: 0 0 0 1px #fff inset;
+    background-color: #157347;
+    text-shadow: 1px 1px 2px #000;
+    color: inherit;
+}
+header img{
+    width: 10%;
+    height: auto;
+}
+header img, header h1{
+    margin: 0 0 2rem 0;
+    vertical-align: middle;
+}
+header h1{
+    display: inline-block;
+}
+
+/* main content */
+main{
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background-color: #19875420;
+    font-size: 1.125rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    row-gap: 2rem;
+}
+.grid img{
+    width: 100%;
+    height: auto;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #fff;
+}
+footer a{
+    color: #51D48F;
+}
+footer a:hover, footer a:focus{
+    color: #198754;
+}
