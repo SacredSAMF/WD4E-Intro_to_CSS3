@@ -1,0 +1,232 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+html{
+    line-height: 1.25;
+    font-size: 18px;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #19875420;
+    font-family: Verdana, sans-serif;
+    color: #333;
+}
+h1{
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    color: black;
+}
+p{
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+h1:first-child, p:first-child{
+    margin-top: 0;
+}
+h1:last-child, p:last-child{
+    margin-bottom: 0;
+}
+a{
+    text-decoration: underline;
+    color: #198754;
+    transition: all 0.3s ease;
+}
+a:hover, a:focus{
+    color: #157347;
+}
+a:focus{
+    outline: 2px dotted #198754;
+    outline-offset: 2px;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+@media (min-width: 576px) {
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+
+
+/* skip link styles */
+.skip-link{
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    left: 0;
+    white-space: nowrap;
+    font-size: 0.75rem;
+}
+.skip-link a{
+    display: block;
+    opacity: 0;
+    padding: 0.125rem;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+}
+.skip-link a:focus{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* HEADER */
+header{
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+}
+nav{    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+}
+.site-logo{
+    display: block;
+    flex-shrink: 0;
+}
+
+.site-nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+.site-nav li{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.site-nav a{
+    display: block;
+    padding: 0.5em 1rem;
+    background-color: #198754;
+    text-decoration: none;
+    color: inherit;
+}
+.site-nav a:hover, .site-nav a:focus{
+    background-color: #157347;
+    color: inherit;
+}
+.site-nav .current a{
+    box-shadow: 0 0 0 1px #fff inset;
+    background-color: #157347;
+    text-shadow: 1px 1px 2px #000;
+    color: inherit;
+}
+
+
+/* MAIN */
+main{
+    width: 100%;
+    flex: 1 1 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: justify;
+}
+.gallery-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem 1rem;
+    margin: 2rem 0;
+    padding: 0;
+}
+.gallery-list:last-child{
+    margin-bottom: 0;
+}
+.gallery-list li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gallery-list a{
+    overflow: hidden;
+    display: block;
+    border-radius: 4px;
+    background-color: #333;
+}
+.gallery-list img{
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.85;
+    padding: 2px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.gallery-list a:hover, .gallery-list a:focus{
+    background-color: #157347;
+}
+.gallery-list a:hover img, .gallery-list a:focus img{
+    opacity: 1;
+    box-shadow: 1px 1px 5px rgb(19 87 54 / .75);
+    border-color: #198754;
+}
+@media (max-width: 991px) {
+    .gallery-list li:nth-child(4n+2) a, 
+    .gallery-list li:nth-child(4n+2) img,
+    .gallery-list li:nth-child(4n+3) a, 
+    .gallery-list li:nth-child(4n+3) img{
+        border-radius: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .gallery-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .gallery-list li:nth-child(2n+2) a, 
+    .gallery-list li:nth-child(2n+2) img{
+        border-radius: 50%;
+    }
+}
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #fff;
+}
+footer a{
+    color: #51D48F;
+}
+footer a:hover, footer a:focus{
+    color: #198754;
+}
